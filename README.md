@@ -1,2 +1,1 @@
-# MythologyDevSeoyeon.github.io
-Blog
+My Github Blog Source
