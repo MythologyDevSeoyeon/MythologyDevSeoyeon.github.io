@@ -1,0 +1,33 @@
+<section class="mx-auto mt-12">
+  <script src="https://giscus.app/client.js"
+    data-repo="MythologyDevJihun/MythologyDevJihun.github.io"
+    data-repo-id="R_kgDONX0Jag"
+    data-category="Comment"
+    data-category-id="DIC_kwDONX0Jas4Ck2Dq"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="1"
+    data-input-position="bottom"
+    data-theme="preferred_color_scheme"
+    data-lang="ko"
+    crossorigin="anonymous"
+    async>
+  </script>
+</section>
+
+<script is:inline>
+  function updateGiscusTheme() {
+    const theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light'
+    const iframe = document.querySelector('iframe.giscus-frame')
+    if (!iframe) return
+    iframe.contentWindow.postMessage({ giscus: { setConfig: { theme } } }, 'https://giscus.app')
+  }
+
+  const observer = new MutationObserver(updateGiscusTheme)
+  observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] })
+
+  window.onload = () => {
+    updateGiscusTheme()
+  }
+</script>
